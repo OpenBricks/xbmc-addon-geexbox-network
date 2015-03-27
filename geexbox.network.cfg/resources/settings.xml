@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+
+   <!-- Network -->
+	<category label="7000">
+		<setting type="sep" />
+		<setting id="NETWORK" type="labelenum" label="7100" values="LAN|WLAN" sort="yes" default="LAN" />
+		<setting id="IFACE" type="labelenum" label="7200" values="eth0|eth1|wlan0" sort="yes" default="eth0"/>
+		<setting type="sep" />
+		<setting id="ADDRESS" type="text" label="7300" default=""/>
+		<setting id="GATEWAY" type="ipaddress" label="7400" default=""/>
+		<setting id="DNS_SERVER" type="ipaddress" label="7500" default=""/>
+		<setting type="sep" />
+		<setting id="SSID" type="text" label="7600" default=""/>
+		<setting id="HIDDEN" type="bool" label="7700" default="false" /> -->
+		<setting id="SECURITY" type="labelenum" label="7800" values="NONE|WPA|RSN|WEP" sort="yes" default="NONE" enable="!eq(-1,)"/>
+		<setting id="PASSPHRASE" type="text" option="hidden" label="7900" default=""  enable="!eq(-1,0)"/>
+  </category>
+
+
+   <!-- Services -->
+    <category label="8000">
+		<setting type="sep" />
+		<setting id="TELNET_SERVER" type="bool" label="8100" default="true" />
+		<setting type="sep" />
+		<setting id="FTP_SERVER" type="bool" label="8200" default="true" />
+		<setting type="sep" />
+		<setting id="HTTP_SERVER" type="bool" label="8300" default="true" />
+		<setting type="sep" />
+		<setting id="SAMBA_SERVER" type="bool" label="8400" default="true" />
+		<setting type="sep" />
+		<setting id="ZEROCONF" type="bool" label="8500" default="true" />
+    </category>
+</settings>
