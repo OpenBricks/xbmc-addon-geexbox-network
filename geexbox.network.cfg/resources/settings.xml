@@ -12,7 +12,7 @@
 		<setting id="DNS_SERVER" type="ipaddress" label="7500" default=""/>
 		<setting type="sep" />
 		<setting id="SSID" type="text" label="7600" default=""/>
-		<setting id="HIDDEN" type="bool" label="7700" default="false" /> -->
+		<setting id="HIDDEN" type="bool" label="7700" default="false" />
 		<setting id="SECURITY" type="labelenum" label="7800" values="NONE|WPA|RSN|WEP" sort="yes" default="NONE" enable="!eq(-1,)"/>
 		<setting id="PASSPHRASE" type="text" option="hidden" label="7900" default=""  enable="!eq(-1,0)"/>
   </category>
@@ -20,6 +20,8 @@
 
    <!-- Services -->
     <category label="8000">
+		<setting type="sep" />
+		<setting id="SSH_SERVER" type="bool" label="8600" default="true" />
 		<setting type="sep" />
 		<setting id="TELNET_SERVER" type="bool" label="8100" default="true" />
 		<setting type="sep" />

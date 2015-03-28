@@ -14,10 +14,11 @@
 
 	<!-- Services -->
 	<string id="8000">Service to start at boot</string>
-	<string id="8100">Telnet Server</string>
+	<string id="8100">Telnet server</string>
 	<string id="8200">FTP server</string>
 	<string id="8300">HTTP server</string>
 	<string id="8400">Samba server</string>
 	<string id="8500">Use Zeroconf</string>
+	<string id="8600">SSH server</string>
 
 </strings>

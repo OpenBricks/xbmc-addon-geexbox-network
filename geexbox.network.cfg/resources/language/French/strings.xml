@@ -19,5 +19,6 @@
 	<string id="8300">Serveur Http</string>
 	<string id="8400">Serveur Samba</string>
 	<string id="8500">Utiliser Zeroconf</string>
+	<string id="8600">Serveur Ssh</string>
 
 </strings>
