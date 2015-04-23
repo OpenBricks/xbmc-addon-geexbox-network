@@ -1,6 +1,7 @@
 import os
 import sys
 import xbmcaddon
+import xml.etree.ElementTree as ET
 
 __scriptname__ = "GeeXboX network configuration"
 __author__ = "The Geexbox Team"
@@ -65,6 +66,15 @@ def execcmd(cmd):
     print "Error: %s" % stderr
     return 'error'
 
+def search_and_replace(label,values):
+  settings_file = "/usr/share/xbmc/addons/geexbox.network.cfg/resources/settings.xml"
+  tree = ET.ElementTree(file=settings_file)
+  root = tree.getroot()
+  for elem in tree.iter('setting') :
+    if len(elem.attrib) > 1:
+      if elem.attrib['label'] == label:
+	elem.set('values', values)
+  tree.write(settings_file)
 
 if __name__ == "__main__":
   Main()
