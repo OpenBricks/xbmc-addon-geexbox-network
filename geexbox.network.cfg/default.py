@@ -83,7 +83,7 @@ def execcmd(cmd):
     return 'error'
 
 def search_and_replace(label,values):
-  settings_file = "/usr/share/xbmc/addons/geexbox.network.cfg/resources/settings.xml"
+  settings_file = __cwd__+"/resources/settings.xml"
   tree = ET.ElementTree(file=settings_file)
   root = tree.getroot()
   for elem in tree.iter('setting') :
