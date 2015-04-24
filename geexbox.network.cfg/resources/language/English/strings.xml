@@ -8,6 +8,8 @@
 	<string id="7400">Gateway</string>
 	<string id="7500">DNS server</string>
 	<string id="7600">SSID</string>
+	<string id="7610">Auto detect SSID</string>
+	<string id="7620">SSID detected</string>
 	<string id="7700">Hidden Network</string>
 	<string id="7800">Network security</string>
 	<string id="7900">Passphrase</string>

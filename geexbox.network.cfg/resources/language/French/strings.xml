@@ -8,6 +8,8 @@
 	<string id="7400">Passerelle</string>
 	<string id="7500">Serveur DNS</string>
 	<string id="7600">SSID</string>
+	<string id="7610">Auto detection des SSID</string>
+	<string id="7620">SSID detecté(s)</string>
 	<string id="7700">Réseau caché</string>
 	<string id="7800">Protocole de sécurité</string>
 	<string id="7900">Mot de passe</string>

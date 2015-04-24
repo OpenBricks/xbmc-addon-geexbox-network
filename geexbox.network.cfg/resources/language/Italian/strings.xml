@@ -8,6 +8,8 @@
 	<string id="7400">Gateway</string>
 	<string id="7500">Server DNS</string>
 	<string id="7600">SSID</string>
+	<string id="7610">Rilevamento automatico SSID</string>
+	<string id="7620">SSID rilevato</string>
 	<string id="7700">Rete nascosta</string>
 	<string id="7800">Sicurezza</string>
 	<string id="7900">Chiave</string>
