@@ -55,6 +55,11 @@ def Main():
 
   refreshSettings()
   __settings__.openSettings()
+
+  ssid_temp = __settings__.getSetting("DETECTED_SSID")
+  if ssid_temp != "":
+    __settings__.setSetting("SSID",ssid_temp)
+
   if is_exe("/bin/update-config-network"):
     execcmd("/bin/update-config-network")
   elif is_exe("/usr/bin/update-config-network"):
