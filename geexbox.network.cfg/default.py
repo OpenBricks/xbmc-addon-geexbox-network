@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 __scriptname__ = "GeeXboX network configuration"
 __author__ = "The Geexbox Team"
 __url__ = "http://www.geexbox.org"
-__version__ = "0.1.2"
+__version__ = "0.1.4"
 
 __settings__   = xbmcaddon.Addon(id='geexbox.addon.network')
 __language__   = __settings__.getLocalizedString
