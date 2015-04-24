@@ -40,6 +40,7 @@ def refreshSettings():
     s[1] = s[1].strip().strip('"')
 
     __settings__.setSetting(s[0], s[1])
+  f.close
 
 def Main():
   refreshSettings()
@@ -75,6 +76,42 @@ def search_and_replace(label,values):
       if elem.attrib['label'] == label:
 	elem.set('values', values)
   tree.write(settings_file)
+
+def search_network_backend():
+  try:
+    f = open("/etc/network")
+  except Exception as e:
+    print "Error: cannot open /etc/network: %s" % e
+    return 'error'
+  for line in f:
+    line = line.strip()
+    if len(line) <= 0:
+      continue
+    if line[0] == '#':
+      continue
+    s = line.split('=', 1)
+    if len(s) != 2:
+      continue
+    s[1] = s[1].strip().strip('"')
+    if s[0] == "NETWORK_BACKEND":
+      f.close
+      return s[1]
+
+def prepare_data(data):
+  a=data
+  if len(a)>0:
+    for i in range(len(a)):
+      a[i]=str(a[i]).strip()
+    if len(a) == 1:
+      return a[0]
+    else:
+      b=a[0]
+      for i in range(1,len(a)):
+	b=b+'|'+a[i]
+      return b
+  else:
+    return ''
+
 
 if __name__ == "__main__":
   Main()
