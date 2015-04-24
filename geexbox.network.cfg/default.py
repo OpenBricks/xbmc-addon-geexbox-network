@@ -43,6 +43,16 @@ def refreshSettings():
   f.close
 
 def Main():
+  client = search_network_backend()
+  if client == "networkmanager":
+    ifaces_found = prepare_data(execcmd("nmcli -f DEVICE dev | tail -n +2"))
+    ssid_found = prepare_data(execcmd("nmcli -f SSID dev wifi | tail -n +2"))
+    search_and_replace('7200',ifaces_found)
+    search_and_replace('7620',ssid_found)
+
+  elif client == "connman":
+    print "Not yet ready !"
+
   refreshSettings()
   __settings__.openSettings()
   if is_exe("/bin/update-config-network"):
