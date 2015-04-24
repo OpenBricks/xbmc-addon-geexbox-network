@@ -111,7 +111,7 @@ def prepare_data(data):
   a=data
   if len(a)>0:
     for i in range(len(a)):
-      a[i]=str(a[i]).strip()
+      a[i]=str(a[i]).strip().strip('\'')
     if len(a) == 1:
       return a[0]
     else:
