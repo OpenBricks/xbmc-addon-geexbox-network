@@ -57,8 +57,10 @@ def Main():
   __settings__.openSettings()
 
   ssid_temp = __settings__.getSetting("DETECTED_SSID")
+  auto_wifi = __settings__.getSetting("USE_DETECTED_SSID")
   if ssid_temp != "":
-    __settings__.setSetting("SSID",ssid_temp)
+    if auto_wifi == "true":
+      __settings__.setSetting("SSID",ssid_temp)
 
   if is_exe("/bin/update-config-network"):
     execcmd("/bin/update-config-network")
