@@ -51,7 +51,9 @@ def Main():
     search_and_replace('7620',ssid_found)
 
   elif client == "connman":
-    print "Not yet ready !"
+    execcmd("connmanctl scan wifi")
+    ssid_found = prepare_data(execcmd("connmanctl services | grep wifi | sed -e 's/^.\{4\}//' -e 's/wifi_.*//'"))
+    search_and_replace('7620',ssid_found)
 
   refreshSettings()
   __settings__.openSettings()
