@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="geexbox.addon.network"
        name="GeeXboX network configuration"
-       version="0.1.4"
+       version="0.2"
        provider-name="geexbox.org">
   <requires>
     <import addon="geexbox.addon.network" version="@OS_VERSION@"/>
