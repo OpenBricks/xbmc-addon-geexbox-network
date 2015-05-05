@@ -54,6 +54,8 @@ def Main():
     execcmd("connmanctl scan wifi")
     ssid_found = prepare_data(execcmd("connmanctl services | grep wifi | sed -e 's/^.\{4\}//' -e 's/wifi_.*//'"))
     search_and_replace('7620',ssid_found)
+    ifaces_found = prepare_data(execcmd("ifconfig -a | grep Ethernet | sed -e 's/ *Link.*//'"))
+    search_and_replace('7200',ifaces_found)
 
   refreshSettings()
   __settings__.openSettings()
