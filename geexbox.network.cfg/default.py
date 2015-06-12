@@ -51,6 +51,7 @@ def Main():
     search_and_replace('7620',ssid_found)
 
   elif client == "connman":
+    execcmd("connmanctl enable wifi")
     execcmd("connmanctl scan wifi")
     ssid_found = prepare_data(execcmd("connmanctl services | grep wifi | sed -e 's/^.\{4\}//' -e 's/wifi_.*//'"))
     search_and_replace('7620',ssid_found)
@@ -65,6 +66,7 @@ def Main():
   if ssid_temp != "":
     if auto_wifi == "true":
       __settings__.setSetting("SSID",ssid_temp)
+  __settings__.setSetting("USE_DETECTED_SSID", "false")
 
   if is_exe("/bin/update-config-network"):
     execcmd("/bin/update-config-network")
@@ -95,7 +97,7 @@ def search_and_replace(label,values):
   for elem in tree.iter('setting') :
     if len(elem.attrib) > 1:
       if elem.attrib['label'] == label:
-	elem.set('values', values)
+        elem.set('values', values)
   tree.write(settings_file)
 
 def search_network_backend():
@@ -128,10 +130,10 @@ def prepare_data(data):
     else:
       b=a[0]
       for i in range(1,len(a)):
-	b=b+'|'+a[i]
+        b=b+'|'+a[i]
       return b
   else:
-    return ''
+    return ' '
 
 
 if __name__ == "__main__":
