@@ -1,0 +1,106 @@
+# XBMC Media Center language file
+# Addon Name: GeeXboX Network Configuration
+# Addon id: geexbox.addon.network
+# Addon version: 0.2.5
+# Addon Provider: Team GeeXboX
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2016-06-21 08:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+msgctxt "Addon Summary"
+msgid "Configure network interfaces"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "This addon is used to setup the network interfaces in GeeXboX."
+msgstr ""
+
+msgctxt "#7000"
+msgid "Network"
+msgstr "Réseau"
+
+msgctxt "#7100"
+msgid "Network"
+msgstr "Réseau"
+
+msgctxt "#7200"
+msgid "Network adapter"
+msgstr "Carte réseau"
+
+msgctxt "#7310"
+msgid "IP address"
+msgstr "Adresse ip"
+
+msgctxt "#7320"
+msgid "Net mask"
+msgstr "Masque de réseau"
+
+msgctxt "#7400"
+msgid "Gateway"
+msgstr "Passerelle"
+
+msgctxt "#7500"
+msgid "DNS server"
+msgstr "Serveur DNS"
+
+msgctxt "#7600"
+msgid "SSID"
+msgstr "SSID"
+
+msgctxt "#7610"
+msgid "Auto detect SSID"
+msgstr "Auto detection des SSID"
+
+msgctxt "#7620"
+msgid "SSID detected"
+msgstr "SSID detecté(s)"
+
+msgctxt "#7700"
+msgid "Hidden Network"
+msgstr "Réseau caché"
+
+msgctxt "#7800"
+msgid "Network security"
+msgstr "Protocole de sécurité"
+
+msgctxt "#7900"
+msgid "Passphrase"
+msgstr "Mot de passe"
+
+msgctxt "#8000"
+msgid "Service to start at boot"
+msgstr "Service au démarrage"
+
+msgctxt "#8100"
+msgid "Telnet server"
+msgstr "Serveur Telnet"
+
+msgctxt "#8200"
+msgid "FTP server"
+msgstr "Serveur Ftp"
+
+msgctxt "#8300"
+msgid "HTTP server"
+msgstr "Serveur Http"
+
+msgctxt "#8400"
+msgid "Samba server"
+msgstr "Serveur Samba"
+
+msgctxt "#8500"
+msgid "Use Zeroconf"
+msgstr "Utiliser Zeroconf"
+
+msgctxt "#8600"
+msgid "SSH server"
+msgstr "Serveur Ssh"
