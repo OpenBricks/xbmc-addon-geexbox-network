@@ -1,3 +1,9 @@
+v0.2.5  (2016-21-06)
+- German translation added
+- Dialog while scanning network
+- Separate entry field for net mask
+- Convert language files to *.po format
+
 v0.2.4  (2016-11-06)
 - Support for Kodi 17.x
 
