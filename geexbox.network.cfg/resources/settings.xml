@@ -3,8 +3,8 @@
 	<!-- Network -->
 	<category label="32000">
 		<setting type="sep" />
-		<setting id="NETWORK" type="labelenum" label="32010" values="LAN|WLAN" sort="yes" default="LAN" />
-		<setting id="IFACE" type="labelenum" label="32020" values="eth0|eth1|wlan0" sort="yes" default="eth0" />
+		<setting id="NETWORK" type="labelenum" label="32010" values="LAN|WLAN" sort="yes" />
+		<setting id="IFACE" type="labelenum" label="32020" values="eth0|eth1|wlan0" sort="yes" />
 		<setting type="sep" />
 		<setting id="NETADDR" type="ipaddress" label="32031" default="" />
 		<setting id="NETMASK" type="ipaddress" label="32032" default="255.255.255.0" />
@@ -26,11 +26,11 @@
 		<setting type="sep" />
 		<setting id="TELNET_SERVER" type="bool" label="32210" default="true" />
 		<setting type="sep" />
-		<setting id="FTP_SERVER" type="bool" label="32220" default="true" />
+		<setting id="FTP_SERVER" type="bool" label="32220" default="false" />
 		<setting type="sep" />
 		<setting id="HTTP_SERVER" type="bool" label="32230" default="true" />
 		<setting type="sep" />
-		<setting id="SAMBA_SERVER" type="bool" label="32240" default="true" />
+		<setting id="SAMBA_SERVER" type="bool" label="32240" default="false" />
 		<setting type="sep" />
 		<setting id="ZEROCONF" type="bool" label="32250" default="true" />
 	</category>
