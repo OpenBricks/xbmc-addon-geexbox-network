@@ -25,123 +25,82 @@ msgctxt "Addon Description"
 msgid "This addon is used to setup the network interfaces in GeeXboX."
 msgstr ""
 
-#Network
-
-msgctxt "#7000"
+msgctxt "#32000"
 msgid "Network"
 msgstr ""
 
-#empty strings from id 7001 to 7099
-
-msgctxt "#7100"
+msgctxt "#32010"
 msgid "Network"
 msgstr ""
 
-#empty strings from id 7101 to 7199
-
-msgctxt "#7200"
+msgctxt "#32020"
 msgid "Network adapter"
 msgstr ""
 
-#empty strings from id 7201 to 7309
-
-msgctxt "#7310"
+msgctxt "#32031"
 msgid "IP address"
 msgstr ""
 
-#empty strings from id 7311 to 7319
-
-msgctxt "#7320"
+msgctxt "#32032"
 msgid "Net mask"
 msgstr ""
 
-#empty strings from id 7321 to 7399
-
-msgctxt "#7400"
+msgctxt "#32040"
 msgid "Gateway"
 msgstr ""
 
-#empty strings from id 7401 to 7499
-
-msgctxt "#7500"
+msgctxt "#32050"
 msgid "DNS server"
 msgstr ""
 
-#empty strings from id 7501 to 7599
-
-msgctxt "#7600"
+msgctxt "#32060"
 msgid "SSID"
 msgstr ""
 
-#empty strings from id 7601 to 7609
-
-msgctxt "#7610"
+msgctxt "#32061"
 msgid "Auto detect SSID"
 msgstr ""
 
-#empty strings from id 7611 to 7619
-
-msgctxt "#7620"
+msgctxt "#32062"
 msgid "SSID detected"
 msgstr ""
 
-#empty strings from id 7621 to 7699
-
-msgctxt "#7700"
+msgctxt "#32070"
 msgid "Hidden Network"
 msgstr ""
 
-#empty strings from id 7701 to 7799
-
-msgctxt "#7800"
+msgctxt "#32080"
 msgid "Network security"
 msgstr ""
 
-#empty strings from id 7801 to 7899
-
-msgctxt "#7900"
+msgctxt "#32090"
 msgid "Passphrase"
 msgstr ""
 
-#Services
-#empty strings from id 7901 to 7999
-
-msgctxt "#8000"
+msgctxt "#32200"
 msgid "Service to start at boot"
 msgstr ""
 
-#empty strings from id 8001 to 8099
-
-msgctxt "#8100"
+msgctxt "#32210"
 msgid "Telnet server"
 msgstr ""
 
-#empty strings from id 8101 to 8199
-
-msgctxt "#8200"
+msgctxt "#32220"
 msgid "FTP server"
 msgstr ""
 
-#empty strings from id 8201 to 8299
-
-msgctxt "#8300"
+msgctxt "#32230"
 msgid "HTTP server"
 msgstr ""
 
-#empty strings from id 8301 to 8399
-
-msgctxt "#8400"
+msgctxt "#32240"
 msgid "Samba server"
 msgstr ""
 
-#empty strings from id 8401 to 8499
-
-msgctxt "#8500"
+msgctxt "#32250"
 msgid "Use Zeroconf"
 msgstr ""
 
-#empty strings from id 8501 to 8599
-
-msgctxt "#8600"
+msgctxt "#32260"
 msgid "SSH server"
 msgstr ""

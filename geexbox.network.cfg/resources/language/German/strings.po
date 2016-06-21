@@ -25,82 +25,82 @@ msgctxt "Addon Description"
 msgid "This addon is used to setup the network interfaces in GeeXboX."
 msgstr ""
 
-msgctxt "#7000"
+msgctxt "#32000"
 msgid "Network"
 msgstr "Netzwerk"
 
-msgctxt "#7100"
+msgctxt "#32010"
 msgid "Network"
 msgstr "Netzwerk"
 
-msgctxt "#7200"
+msgctxt "#32020"
 msgid "Network adapter"
 msgstr "Adapter"
 
-msgctxt "#7310"
+msgctxt "#32031"
 msgid "IP address"
 msgstr "IP-Adresse"
 
-msgctxt "#7320"
+msgctxt "#32032"
 msgid "Net mask"
 msgstr "Netzmaske"
 
-msgctxt "#7400"
+msgctxt "#32040"
 msgid "Gateway"
 msgstr "Gateway"
 
-msgctxt "#7500"
+msgctxt "#32050"
 msgid "DNS server"
 msgstr "DNS Server"
 
-msgctxt "#7600"
+msgctxt "#32060"
 msgid "SSID"
 msgstr "SSID"
 
-msgctxt "#7610"
+msgctxt "#32061"
 msgid "Auto detect SSID"
 msgstr "WLAN Suche"
 
-msgctxt "#7620"
+msgctxt "#32062"
 msgid "SSID detected"
 msgstr "SSID gefunden"
 
-msgctxt "#7700"
+msgctxt "#32070"
 msgid "Hidden Network"
 msgstr "Vestecktes Netz"
 
-msgctxt "#7800"
+msgctxt "#32080"
 msgid "Network security"
 msgstr "Sicherheit"
 
-msgctxt "#7900"
+msgctxt "#32090"
 msgid "Passphrase"
 msgstr "Passwort"
 
-msgctxt "#8000"
+msgctxt "#32200"
 msgid "Service to start at boot"
 msgstr "Autostart"
 
-msgctxt "#8100"
+msgctxt "#32210"
 msgid "Telnet server"
 msgstr "Telnet Server"
 
-msgctxt "#8200"
+msgctxt "#32220"
 msgid "FTP server"
 msgstr "FTP Server"
 
-msgctxt "#8300"
+msgctxt "#32230"
 msgid "HTTP server"
 msgstr "HTTP Server"
 
-msgctxt "#8400"
+msgctxt "#32240"
 msgid "Samba server"
 msgstr "Samba Server"
 
-msgctxt "#8500"
+msgctxt "#32250"
 msgid "Use Zeroconf"
 msgstr "Zeroconf verwenden"
 
-msgctxt "#8600"
+msgctxt "#32260"
 msgid "SSH server"
 msgstr "SSH Server"

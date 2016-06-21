@@ -113,8 +113,8 @@ def Main():
     ssid_found = " "
     ifaces_found = "eth0|eth1|wlan0"
 
-  search_and_replace('7200', ifaces_found)
-  search_and_replace('7620', ssid_found)
+  search_and_replace('32020', ifaces_found)
+  search_and_replace('32062', ssid_found)
   __settings__.openSettings()
 
   # retrieve detected SSID
