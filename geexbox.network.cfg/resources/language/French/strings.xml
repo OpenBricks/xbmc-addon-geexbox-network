@@ -2,9 +2,10 @@
 <strings>
 	<!-- Network -->
 	<string id="7000">Réseau</string>
-        <string id="7100">Réseau</string>
+	<string id="7100">Réseau</string>
 	<string id="7200">Carte réseau</string>
-	<string id="7300">Ip</string>
+	<string id="7310">Adresse ip</string>
+	<string id="7320">Masque de réseau</string>
 	<string id="7400">Passerelle</string>
 	<string id="7500">Serveur DNS</string>
 	<string id="7600">SSID</string>

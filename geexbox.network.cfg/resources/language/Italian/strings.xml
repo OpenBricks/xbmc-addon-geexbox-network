@@ -2,9 +2,10 @@
 <strings>
 	<!-- Network -->
 	<string id="7000">Rete</string>
-        <string id="7100">Rete</string>
+	<string id="7100">Rete</string>
 	<string id="7200">Scheda di rete</string>
-	<string id="7300">Indirizzo IP</string>
+	<string id="7310">Indirizzo IP</string>
+	<string id="7320">Maschera di rete</string>
 	<string id="7400">Gateway</string>
 	<string id="7500">Server DNS</string>
 	<string id="7600">SSID</string>

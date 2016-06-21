@@ -2,9 +2,10 @@
 <strings>
 	<!-- Network -->
 	<string id="7000">Network</string>
-        <string id="7100">Network</string>
+	<string id="7100">Network</string>
 	<string id="7200">Network adapter</string>
-	<string id="7300">IP</string>
+	<string id="7310">IP address</string>
+	<string id="7320">Net mask</string>
 	<string id="7400">Gateway</string>
 	<string id="7500">DNS server</string>
 	<string id="7600">SSID</string>
