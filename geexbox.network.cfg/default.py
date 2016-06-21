@@ -1,5 +1,6 @@
 import os
 import sys
+import xbmcgui
 import xbmcaddon
 import xml.etree.ElementTree as ET
 
@@ -98,6 +99,15 @@ def set_ip(label, value, suffix):
     __settings__.setSetting(label, value + suffix)
 
 def Main():
+  try:
+    busy_dlg = xbmcgui.DialogProgress()
+    busy_dlg.create(__scriptname__, __settings__.getLocalizedString(32300))
+    may_cancel = 1
+  except AttributeError:
+    busy_dlg = xbmcgui.WindowXML("DialogBusy.xml", __cwd__.decode("utf-8"))
+    busy_dlg.show()
+    may_cancel = 0
+
   loadNetworkConfig()
   client = __settings__.getSetting("NETWORK_BACKEND")
 
@@ -113,8 +123,14 @@ def Main():
     ssid_found = " "
     ifaces_found = "eth0|eth1|wlan0"
 
+  if may_cancel and busy_dlg.iscanceled():
+    return
+
   search_and_replace('32020', ifaces_found)
   search_and_replace('32062', ssid_found)
+
+  busy_dlg.close()
+
   __settings__.openSettings()
 
   # retrieve detected SSID

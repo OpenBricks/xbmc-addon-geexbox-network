@@ -104,3 +104,7 @@ msgstr "Usa Zeroconf"
 msgctxt "#32260"
 msgid "SSH server"
 msgstr "Server SSH"
+
+msgctxt "#32300"
+msgid "Scanning WiFi network ..."
+msgstr "Scansione di rete WiFi ..."
