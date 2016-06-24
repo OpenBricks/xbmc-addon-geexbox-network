@@ -26,8 +26,8 @@ msgid "This addon is used to setup the network interfaces in GeeXboX."
 msgstr ""
 
 msgctxt "#32000"
-msgid "Network"
-msgstr "Rete"
+msgid "Connection 1"
+msgstr "Connessione 1"
 
 msgctxt "#32010"
 msgid "Network"
@@ -77,8 +77,72 @@ msgctxt "#32090"
 msgid "Passphrase"
 msgstr "Chiave"
 
+msgctxt "#32091"
+msgid "Wait for network startup"
+msgstr "Attendere che l'avvio di rete"
+
+msgctxt "#32100"
+msgid "Connection 2"
+msgstr "Connessione 2"
+
+msgctxt "#32101"
+msgid "Enable"
+msgstr "Attivare"
+
+msgctxt "#32110"
+msgid "Network"
+msgstr "Rete"
+
+msgctxt "#32120"
+msgid "Network adapter"
+msgstr "Scheda di rete"
+
+msgctxt "#32131"
+msgid "IP address"
+msgstr "Indirizzo IP"
+
+msgctxt "#32132"
+msgid "Net mask"
+msgstr "Maschera di rete"
+
+msgctxt "#32140"
+msgid "Gateway"
+msgstr "Gateway"
+
+msgctxt "#32150"
+msgid "DNS server"
+msgstr "Server DNS"
+
+msgctxt "#32160"
+msgid "SSID"
+msgstr "SSID"
+
+msgctxt "#32161"
+msgid "Auto detect SSID"
+msgstr "Rilevamento automatico SSID"
+
+msgctxt "#32162"
+msgid "SSID detected"
+msgstr "SSID rilevato"
+
+msgctxt "#32170"
+msgid "Hidden Network"
+msgstr "Rete nascosta"
+
+msgctxt "#32180"
+msgid "Network security"
+msgstr "Sicurezza"
+
+msgctxt "#32190"
+msgid "Passphrase"
+msgstr "Chiave"
+
+msgctxt "#32191"
+msgid "Wait for network startup"
+msgstr "Attendere che l'avvio di rete"
+
 msgctxt "#32200"
-msgid "Service to start at boot"
+msgid "Autostart"
 msgstr "Servizi da avviare"
 
 msgctxt "#32210"

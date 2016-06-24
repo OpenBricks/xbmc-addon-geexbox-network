@@ -26,7 +26,7 @@ msgid "This addon is used to setup the network interfaces in GeeXboX."
 msgstr ""
 
 msgctxt "#32000"
-msgid "Network"
+msgid "Connection 1"
 msgstr ""
 
 msgctxt "#32010"
@@ -77,8 +77,72 @@ msgctxt "#32090"
 msgid "Passphrase"
 msgstr ""
 
+msgctxt "#32091"
+msgid "Wait for network startup"
+msgstr ""
+
+msgctxt "#32100"
+msgid "Connection 2"
+msgstr ""
+
+msgctxt "#32101"
+msgid "Enable"
+msgstr ""
+
+msgctxt "#32110"
+msgid "Network"
+msgstr ""
+
+msgctxt "#32120"
+msgid "Network adapter"
+msgstr ""
+
+msgctxt "#32131"
+msgid "IP address"
+msgstr ""
+
+msgctxt "#32132"
+msgid "Net mask"
+msgstr ""
+
+msgctxt "#32140"
+msgid "Gateway"
+msgstr ""
+
+msgctxt "#32150"
+msgid "DNS server"
+msgstr ""
+
+msgctxt "#32160"
+msgid "SSID"
+msgstr ""
+
+msgctxt "#32161"
+msgid "Auto detect SSID"
+msgstr ""
+
+msgctxt "#32162"
+msgid "SSID detected"
+msgstr ""
+
+msgctxt "#32170"
+msgid "Hidden Network"
+msgstr ""
+
+msgctxt "#32180"
+msgid "Network security"
+msgstr ""
+
+msgctxt "#32190"
+msgid "Passphrase"
+msgstr ""
+
+msgctxt "#32191"
+msgid "Wait for network startup"
+msgstr ""
+
 msgctxt "#32200"
-msgid "Service to start at boot"
+msgid "Autostart"
 msgstr ""
 
 msgctxt "#32210"
