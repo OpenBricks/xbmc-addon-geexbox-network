@@ -30,8 +30,8 @@ msgid "Connection 1"
 msgstr "Connexion 1"
 
 msgctxt "#32010"
-msgid "Network"
-msgstr "Réseau"
+msgid "Network type"
+msgstr "Type de réseau"
 
 msgctxt "#32020"
 msgid "Network adapter"
@@ -54,16 +54,12 @@ msgid "DNS server"
 msgstr "Serveur DNS"
 
 msgctxt "#32060"
-msgid "SSID"
-msgstr "SSID"
-
-msgctxt "#32061"
-msgid "Auto detect SSID"
-msgstr "Auto detection des SSID"
+msgid "SSID (manual)"
+msgstr "SSID (manuel)"
 
 msgctxt "#32062"
-msgid "SSID detected"
-msgstr "SSID detecté(s)"
+msgid "SSID"
+msgstr "SSID"
 
 msgctxt "#32070"
 msgid "Hidden Network"
@@ -90,8 +86,8 @@ msgid "Enable"
 msgstr "Activer"
 
 msgctxt "#32110"
-msgid "Network"
-msgstr "Réseau"
+msgid "Network type"
+msgstr "Type de réseau"
 
 msgctxt "#32120"
 msgid "Network adapter"
@@ -114,16 +110,12 @@ msgid "DNS server"
 msgstr "Serveur DNS"
 
 msgctxt "#32160"
-msgid "SSID"
-msgstr "SSID"
-
-msgctxt "#32161"
-msgid "Auto detect SSID"
-msgstr "Auto detection des SSID"
+msgid "SSID (manual)"
+msgstr "SSID (manuel)"
 
 msgctxt "#32162"
-msgid "SSID detected"
-msgstr "SSID detecté(s)"
+msgid "SSID"
+msgstr "SSID"
 
 msgctxt "#32170"
 msgid "Hidden Network"

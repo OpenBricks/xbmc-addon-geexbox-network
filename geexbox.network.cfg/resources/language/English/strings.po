@@ -30,7 +30,7 @@ msgid "Connection 1"
 msgstr ""
 
 msgctxt "#32010"
-msgid "Network"
+msgid "Network type"
 msgstr ""
 
 msgctxt "#32020"
@@ -54,15 +54,11 @@ msgid "DNS server"
 msgstr ""
 
 msgctxt "#32060"
-msgid "SSID"
-msgstr ""
-
-msgctxt "#32061"
-msgid "Auto detect SSID"
+msgid "SSID (manual)"
 msgstr ""
 
 msgctxt "#32062"
-msgid "SSID detected"
+msgid "SSID"
 msgstr ""
 
 msgctxt "#32070"
@@ -90,7 +86,7 @@ msgid "Enable"
 msgstr ""
 
 msgctxt "#32110"
-msgid "Network"
+msgid "Network type"
 msgstr ""
 
 msgctxt "#32120"
@@ -114,15 +110,11 @@ msgid "DNS server"
 msgstr ""
 
 msgctxt "#32160"
-msgid "SSID"
-msgstr ""
-
-msgctxt "#32161"
-msgid "Auto detect SSID"
+msgid "SSID (manual)"
 msgstr ""
 
 msgctxt "#32162"
-msgid "SSID detected"
+msgid "SSID"
 msgstr ""
 
 msgctxt "#32170"

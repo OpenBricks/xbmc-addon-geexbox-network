@@ -2,9 +2,9 @@ import os
 import sys
 import time
 import hashlib
+import xbmcvfs
 import xbmcgui
 import xbmcaddon
-import xml.etree.ElementTree as ET
 
 __scriptname__ = "GeeXboX network configuration"
 __author__     = "The Geexbox Team"
@@ -14,6 +14,7 @@ __version__    = "0.2.6"
 __settings__   = xbmcaddon.Addon(id='geexbox.addon.network')
 __language__   = __settings__.getLocalizedString
 __cwd__        = __settings__.getAddonInfo('path')
+__prf__        = __settings__.getAddonInfo('profile')
 
 ROOTDIR = os.getcwd().replace( ";", "" )
 
@@ -111,29 +112,6 @@ def saveNetworkConfig(cfgFile, suffix, chksum):
   os.rename(tmpFile, cfgFile)
   return 1
 
-# inject detected information into GUI *.xml
-def search_and_replace(guiFile, label, values):
-  tree = ET.ElementTree(file=guiFile)
-  root = tree.getroot()
-  for elem in tree.iter('setting'):
-    if len(elem.attrib) > 1 and elem.attrib['label'] == label:
-      elem.set('values', values)
-  tree.write(guiFile)
-
-# convert string list to string using '|' as separator
-def prepare_data(data):
-  if len(data) <= 0:
-    return "-"
-  a = data
-  for i in range(len(a)):
-    a[i] = str(a[i]).strip().strip('\'')
-  if len(a) == 1:
-    return a[0]
-  b = a[0]
-  for i in range(1, len(a)):
-    b = b + '|' + a[i]
-  return b
-
 # write ip address, optionally with net mask in slash notation
 def set_ip(label, value, suffix):
   if value == "" or value == "0.0.0.0":
@@ -160,6 +138,28 @@ def reload_network_backend(name):
     time.sleep(1)
     os.system("systemctl restart" + args)
 
+# unquote and remove spaces from list elements
+def itemlist_cleanup(item_list):
+  newlist = []
+  for i in range(len(item_list)):
+    s = str(item_list[i]).strip().strip('\'').strip()
+    if s != "":
+      newlist.append(s)
+  return newlist
+
+# create a file for each list element
+def itemlist_to_fileenum(base_dir, item_list):
+  if not xbmcvfs.exists(base_dir):
+    xbmcvfs.mkdirs(base_dir)
+  else:
+    dirs, files = xbmcvfs.listdir(base_dir)
+    for f in files:
+      xbmcvfs.delete(base_dir + '/' + f)
+
+  for f in item_list:
+    n = xbmcvfs.File(base_dir + '/' + f, "w")
+    n.close()
+
 # main entry
 def Main():
   # create progress dialog (special handling for Frodo)
@@ -179,39 +179,42 @@ def Main():
   __settings__.setSetting("NETWORK_BACKEND2", client)
 
   if client == "networkmanager":
-    ssid_found = prepare_data(execcmd("nmcli -f SSID dev wifi | tail -n +2"))
-    ifaces_found = prepare_data(execcmd("nmcli -f DEVICE dev | tail -n +2"))
+    ssid_found = itemlist_cleanup(execcmd("nmcli -f SSID dev wifi | tail -n +2"))
+    ifaces_found = itemlist_cleanup(execcmd("nmcli -f DEVICE dev | tail -n +2"))
   elif client == "connman":
     os.system("connmanctl enable wifi; connmanctl scan wifi")
-    ssid_found = prepare_data(execcmd("connmanctl services | grep wifi | sed -e 's/^.\{4\}//' -e 's/wifi_.*//'"))
-    ifaces_found = prepare_data(execcmd("ifconfig -a | grep Ethernet | sed -e 's/ *Link.*//'"))
+    ssid_found = itemlist_cleanup(execcmd("connmanctl services | grep wifi | sed -e 's/^.\{4\}//' -e 's/wifi_.*//'"))
+    ifaces_found = itemlist_cleanup(execcmd("ifconfig -a | grep Ethernet | sed -e 's/ *Link.*//'"))
   else:
-    ssid_found = "-"
-    ifaces_found = "-"
+    ssid_found = []
+    ifaces_found = itemlist_cleanup(execcmd("ifconfig -a | grep Ethernet | sed -e 's/ *Link.*//'"))
 
   if may_cancel and busy_dlg.iscanceled():
     return
 
-  if ifaces_found == "-":
-    ifaces_found = "eth0|eth1|wlan0"
+  if ifaces_found == []:
+    ifaces_found = [ "eth0", "eth1", "wlan0" ]
+  itemlist_to_fileenum(__prf__ + "netscan-0", ifaces_found)
 
-  dialog_file = __cwd__ + "/resources/settings.xml"
-  search_and_replace(dialog_file, '32020', ifaces_found)
-  search_and_replace(dialog_file, '32120', ifaces_found)
-  search_and_replace(dialog_file, '32062', ssid_found)
-  search_and_replace(dialog_file, '32162', ssid_found)
+  for suffix in ("","2"):
+    if __settings__.getSetting("SSID" + suffix) not in ssid_found:
+      __settings__.setSetting("SSID" + suffix, "-")
+  ssid_found.insert(0, "-")
+  itemlist_to_fileenum(__prf__ + "netscan-1", ssid_found)
 
   busy_dlg.close()
 
   __settings__.openSettings()
 
   for suffix in ("","2"):
-    # retrieve detected SSID
-    ssid_temp = __settings__.getSetting("DETECTED_SSID" + suffix)
-    auto_wifi = __settings__.getSetting("USE_DETECTED_SSID" + suffix)
-    if auto_wifi == "true" and ssid_temp != "-":
-      __settings__.setSetting("SSID" + suffix, ssid_temp)
-    __settings__.setSetting("USE_DETECTED_SSID" + suffix, "false")
+    # retrieve SSID
+    ssid_temp= __settings__.getSetting("SSID" + suffix)
+    if ssid_temp == "-":
+      __settings__.setSetting("SSID" + suffix, \
+        __settings__.getSetting("SSID_MANUAL" + suffix))
+    else:
+      __settings__.setSetting("HIDDEN" + suffix, "false")
+      __settings__.setSetting("SSID_MANUAL" + suffix, ssid_temp)
 
     # convert ip address and netmask to 'slash form'
     adr = __settings__.getSetting("NETADDR" + suffix)
