@@ -33,49 +33,49 @@ msgctxt "#32010"
 msgid "Network type"
 msgstr "Netzwerktyp"
 
-msgctxt "#32020"
+msgctxt "#32011"
 msgid "Network adapter"
 msgstr "Adapter"
 
-msgctxt "#32031"
+msgctxt "#32020"
 msgid "IP address"
 msgstr "IP-Adresse"
 
-msgctxt "#32032"
+msgctxt "#32021"
 msgid "Net mask"
 msgstr "Netzmaske"
 
-msgctxt "#32040"
+msgctxt "#32022"
 msgid "Gateway"
 msgstr "Gateway"
 
-msgctxt "#32050"
+msgctxt "#32023"
 msgid "DNS server"
 msgstr "DNS Server"
 
-msgctxt "#32060"
-msgid "SSID (manual)"
-msgstr "SSID (manuell)"
+msgctxt "#32030"
+msgid "Wait for network startup"
+msgstr "Warte auf Netzwerkstart"
 
-msgctxt "#32062"
+msgctxt "#32040"
 msgid "SSID"
 msgstr "SSID"
 
-msgctxt "#32070"
+msgctxt "#32041"
+msgid "SSID (manual)"
+msgstr "SSID (manuell)"
+
+msgctxt "#32042"
 msgid "Hidden Network"
 msgstr "Vestecktes Netz"
 
-msgctxt "#32080"
+msgctxt "#32050"
 msgid "Network security"
 msgstr "Sicherheit"
 
-msgctxt "#32090"
+msgctxt "#32051"
 msgid "Passphrase"
 msgstr "Passwort"
-
-msgctxt "#32091"
-msgid "Wait for network startup"
-msgstr "Warte auf Netzwerkstart"
 
 msgctxt "#32100"
 msgid "Connection 2"
@@ -89,49 +89,49 @@ msgctxt "#32110"
 msgid "Network type"
 msgstr "Netzwerktyp"
 
-msgctxt "#32120"
+msgctxt "#32111"
 msgid "Network adapter"
 msgstr "Adapter"
 
-msgctxt "#32131"
+msgctxt "#32120"
 msgid "IP address"
 msgstr "IP-Adresse"
 
-msgctxt "#32132"
+msgctxt "#32121"
 msgid "Net mask"
 msgstr "Netzmaske"
 
-msgctxt "#32140"
+msgctxt "#32122"
 msgid "Gateway"
 msgstr "Gateway"
 
-msgctxt "#32150"
+msgctxt "#32123"
 msgid "DNS server"
 msgstr "DNS Server"
 
-msgctxt "#32160"
-msgid "SSID (manual)"
-msgstr "SSID (manuell)"
+msgctxt "#32130"
+msgid "Wait for network startup"
+msgstr "Warte auf Netzwerkstart"
 
-msgctxt "#32162"
+msgctxt "#32140"
 msgid "SSID"
 msgstr "SSID"
 
-msgctxt "#32170"
+msgctxt "#32141"
+msgid "SSID (manual)"
+msgstr "SSID (manuell)"
+
+msgctxt "#32142"
 msgid "Hidden Network"
 msgstr "Vestecktes Netz"
 
-msgctxt "#32180"
+msgctxt "#32150"
 msgid "Network security"
 msgstr "Sicherheit"
 
-msgctxt "#32190"
+msgctxt "#32151"
 msgid "Passphrase"
 msgstr "Passwort"
-
-msgctxt "#32191"
-msgid "Wait for network startup"
-msgstr "Warte auf Netzwerkstart"
 
 msgctxt "#32200"
 msgid "Autostart"

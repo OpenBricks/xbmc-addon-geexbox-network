@@ -4,38 +4,38 @@
 	<category label="32000">
 		<setting type="sep" />
 		<setting id="NETWORK" type="labelenum" label="32010" values="LAN|WLAN" sort="yes" />
-		<setting id="IFACE" type="fileenum" label="32020" values="$PROFILE/netscan-0" />
+		<setting id="IFACE" type="fileenum" label="32011" values="$PROFILE/netscan-0" />
 		<setting type="sep" />
-		<setting id="NETADDR" type="ipaddress" label="32031" default="" />
-		<setting id="NETMASK" type="ipaddress" label="32032" default="255.255.255.0" enable="!eq(-1,) + !eq(-1,0.0.0.0)" />
-		<setting id="GATEWAY" type="ipaddress" label="32040" default="" />
-		<setting id="DNS_SERVER" type="ipaddress" label="32050" default="" />
+		<setting id="NETADDR" type="ipaddress" label="32020" default="" />
+		<setting id="NETMASK" type="ipaddress" label="32021" default="255.255.255.0" enable="!eq(-1,) + !eq(-1,0.0.0.0)" />
+		<setting id="GATEWAY" type="ipaddress" label="32022" default="" />
+		<setting id="DNS_SERVER" type="ipaddress" label="32023" default="" />
 		<setting type="sep" />
-		<setting id="SSID" type="fileenum" label="32062" values="$PROFILE/netscan-1" visible="eq(-8,1)" />
-		<setting id="SSID_MANUAL" type="text" label="32060" default="" visible="eq(-9,1) + eq(-1,-)" />
-		<setting id="HIDDEN" type="bool" label="32070" default="false" enable="!eq(-1,)" visible="eq(-10,1) + eq(-2,-)" />
-		<setting id="SECURITY" type="labelenum" label="32080" values="NONE|WPA|RSN|WEP" sort="yes" default="NONE" enable="!eq(-3,-) | !eq(-2,)" visible="eq(-11,1)" />
-		<setting id="PASSPHRASE" type="text" option="hidden" label="32090" default="" enable="!eq(-1,0)" visible="eq(-12,1)" />
-		<setting id="WAIT_FOR_SLOW_DEVICE" type="bool" label="32091" default="true" />
+		<setting id="SSID" type="fileenum" label="32040" values="$PROFILE/netscan-1" visible="eq(-8,1)" />
+		<setting id="SSID_MANUAL" type="text" label="32041" default="" visible="eq(-9,1) + eq(-1,-)" />
+		<setting id="HIDDEN" type="bool" label="32042" default="false" enable="!eq(-1,)" visible="eq(-10,1) + eq(-2,-)" />
+		<setting id="SECURITY" type="labelenum" label="32050" values="NONE|WPA|RSN|WEP" sort="yes" default="NONE" enable="!eq(-3,-) | !eq(-2,)" visible="eq(-11,1)" />
+		<setting id="PASSPHRASE" type="text" option="hidden" label="32051" default="" enable="!eq(-1,0)" visible="eq(-12,1)" />
+		<setting id="WAIT_FOR_SLOW_DEVICE" type="bool" label="32030" default="true" />
 	</category>
 
 	<category label="32100">
 		<setting type="sep" />
 		<setting id="ENABLE2" type="bool" label="32101" default="false" />
 		<setting id="NETWORK2" type="labelenum" label="32110" values="LAN|WLAN" sort="yes" enable="eq(-1,true)" />
-		<setting id="IFACE2" type="fileenum" label="32120" values="$PROFILE/netscan-0" enable="eq(-2,true)" />
+		<setting id="IFACE2" type="fileenum" label="32111" values="$PROFILE/netscan-0" enable="eq(-2,true)" />
 		<setting type="sep" />
-		<setting id="NETADDR2" type="ipaddress" label="32131" default=""  enable="eq(-4,true) "/>
-		<setting id="NETMASK2" type="ipaddress" label="32132" default="255.255.255.0" enable="eq(-5,true) + !eq(-1,) + !eq(-1,0.0.0.0)" />
-		<setting id="GATEWAY2" type="ipaddress" label="32140" default=""  enable="eq(-6,true)" />
-		<setting id="DNS_SERVER2" type="ipaddress" label="32150" default="" enable="eq(-7,true)" />
+		<setting id="NETADDR2" type="ipaddress" label="32120" default=""  enable="eq(-4,true) "/>
+		<setting id="NETMASK2" type="ipaddress" label="32121" default="255.255.255.0" enable="eq(-5,true) + !eq(-1,) + !eq(-1,0.0.0.0)" />
+		<setting id="GATEWAY2" type="ipaddress" label="32122" default=""  enable="eq(-6,true)" />
+		<setting id="DNS_SERVER2" type="ipaddress" label="32123" default="" enable="eq(-7,true)" />
 		<setting type="sep" />
-		<setting id="SSID2" type="fileenum" label="32162" values="$PROFILE/netscan-1" enable="eq(-9,true)" visible="eq(-8,1)" />
-		<setting id="SSID_MANUAL2" type="text" label="32160" default="" enable="eq(-10,true)" visible="eq(-9,1) + eq(-1,-)" />
-		<setting id="HIDDEN2" type="bool" label="32170" default="false" enable="eq(-11,true) + !eq(-1,)" visible="eq(-10,1) + eq(-2,-)" />
-		<setting id="SECURITY2" type="labelenum" label="32180" values="NONE|WPA|RSN|WEP" sort="yes" default="NONE" enable="eq(-12,true) + !eq(-3,-) | eq(-2,)" visible="eq(-11,1)" />
-		<setting id="PASSPHRASE2" type="text" option="hidden" label="32190" default="" enable="eq(-13,true) + !eq(-1,0)" visible="eq(-12,1)" />
-		<setting id="WAIT_FOR_SLOW_DEVICE2" type="bool" label="32191" default="true" enable="eq(-14,true)" />
+		<setting id="SSID2" type="fileenum" label="32140" values="$PROFILE/netscan-1" enable="eq(-9,true)" visible="eq(-8,1)" />
+		<setting id="SSID_MANUAL2" type="text" label="32141" default="" enable="eq(-10,true)" visible="eq(-9,1) + eq(-1,-)" />
+		<setting id="HIDDEN2" type="bool" label="32142" default="false" enable="eq(-11,true) + !eq(-1,)" visible="eq(-10,1) + eq(-2,-)" />
+		<setting id="SECURITY2" type="labelenum" label="32150" values="NONE|WPA|RSN|WEP" sort="yes" default="NONE" enable="eq(-12,true) + !eq(-3,-) | eq(-2,)" visible="eq(-11,1)" />
+		<setting id="PASSPHRASE2" type="text" option="hidden" label="32151" default="" enable="eq(-13,true) + !eq(-1,0)" visible="eq(-12,1)" />
+		<setting id="WAIT_FOR_SLOW_DEVICE2" type="bool" label="32130" default="true" enable="eq(-14,true)" />
 	</category>
 
 	<!-- Services -->
