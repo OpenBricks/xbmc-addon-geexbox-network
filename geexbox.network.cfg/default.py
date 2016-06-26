@@ -149,12 +149,11 @@ def itemlist_cleanup(item_list):
 
 # create a file for each list element
 def itemlist_to_fileenum(base_dir, item_list):
-  if not xbmcvfs.exists(base_dir):
-    xbmcvfs.mkdirs(base_dir)
-  else:
-    dirs, files = xbmcvfs.listdir(base_dir)
-    for f in files:
-      xbmcvfs.delete(base_dir + '/' + f)
+  xbmcvfs.mkdirs(base_dir)
+
+  dirs, files = xbmcvfs.listdir(base_dir)
+  for f in files:
+    xbmcvfs.delete(base_dir + '/' + f)
 
   for f in item_list:
     n = xbmcvfs.File(base_dir + '/' + f, "w")
