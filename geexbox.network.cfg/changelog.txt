@@ -1,3 +1,6 @@
+v0.2.7  (2016-17-09)
+- Require xbmc.python 2.1.0
+
 v0.2.6  (2016-23-06)
 - Allow configuration of second interface
 - Remove need for 'update-config-network' script
