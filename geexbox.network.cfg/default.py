@@ -113,11 +113,29 @@ def saveNetworkConfig(cfgFile, suffix, chksum):
   return 1
 
 # write ip address, optionally with net mask in slash notation
-def set_ip(label, value, suffix):
-  if value == "" or value == "0.0.0.0":
-    __settings__.setSetting(label, "")
+def update_ip_setting(dstname, srcname = "", maskname = ""):
+  if srcname == "":
+    adrpart = __settings__.getSetting(dstname)
   else:
-    __settings__.setSetting(label, value + suffix)
+    adrpart = __settings__.getSetting(srcname)
+
+  # "0.0.0.0" -> empty (i.e. use default/DHCP)
+  if adrpart == "0.0.0.0":
+    adrpart = ""
+
+  netpart = ""
+  if maskname != "" and adrpart != "":
+    # convert netmask to slash form
+    cnt = 0
+    msk = __settings__.getSetting(maskname).split('.', 4)
+    if len(msk) == 4 and msk[0] != "":
+      for i in range(0,31):
+        if ((int(msk[i / 8]) << (i % 8)) & 128) == 0:
+          break
+        cnt = cnt + 1
+    netpart = '/' + str(cnt)
+
+  __settings__.setSetting(dstname, adrpart + netpart)
 
 # restart network services
 def reload_network_backend(name):
@@ -207,7 +225,7 @@ def Main():
 
   for suffix in ("","2"):
     # retrieve SSID
-    ssid_temp= __settings__.getSetting("SSID" + suffix)
+    ssid_temp = __settings__.getSetting("SSID" + suffix)
     if ssid_temp == "-":
       __settings__.setSetting("SSID" + suffix, \
         __settings__.getSetting("SSID_MANUAL" + suffix))
@@ -215,18 +233,9 @@ def Main():
       __settings__.setSetting("HIDDEN" + suffix, "false")
       __settings__.setSetting("SSID_MANUAL" + suffix, ssid_temp)
 
-    # convert ip address and netmask to 'slash form'
-    adr = __settings__.getSetting("NETADDR" + suffix)
-    msk = __settings__.getSetting("NETMASK" + suffix).split('.', 4)
-    cnt = 0
-    for i in range(0,31):
-      if ((int(msk[i / 8]) << (i % 8)) & 128) == 0:
-        break
-      cnt = cnt + 1
-
-    set_ip("ADDRESS" + suffix, adr, '/' + str(cnt))
-    set_ip("GATEWAY" + suffix, __settings__.getSetting("GATEWAY" + suffix), "")
-    set_ip("DNS_SERVER" + suffix, __settings__.getSetting("DNS_SERVER" + suffix), "")
+    update_ip_setting("ADDRESS" + suffix, "NETADDR" + suffix, "NETMASK" + suffix)
+    update_ip_setting("GATEWAY" + suffix)
+    update_ip_setting("DNS_SERVER" + suffix)
 
   changed = 0
   changed = changed + saveNetworkConfig("/etc/network", "", chksum1)
